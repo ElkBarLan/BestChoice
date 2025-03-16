@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pag_Evi_Pedido</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+    <script src="validar.js"></script>
+    <link rel="stylesheet" href="./styles.css"> 
+</head>  
+<body>
+    <!--Encabezado-->
+    <nav class="nav-extended red darken-4">
+        <figure>
+            <img src="./imagenes/Logo2.png" alt="Logo">
+        </figure>
+        <ul class="right">
+          <li>
+            <a href="index.html" class="waves-effect waves-light btn" type="reset">
+              <i class="material-icons right">local_dining</i>Regresar</a>
+          </li>
+        </ul>
+      <h1 class="titulo_1">¡¡¡De la cocina a tus manos!!!</h1>
+    </nav>
+    <!---Contenido-->
+     <section>
+        <div class="container">
+            <div class="row">
+              <h3 class="titulo_2">Orden de pedido ###</h3>
+                <div class="col s12">
+                    <div class="card blue-grey darken-1">
+                      <div class="card-content white-text">
+                        <table class="responsive-table">
+                          <thead>
+                            <tr>
+                              <th>Producto</th>
+                              <th>Costo del producto</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Eclair</td>
+                              <td>$0.87</td>
+                            </tr>
+                            <tr>
+                              <td>Jellybean</td>
+                              <td>$3.76</td>
+                            </tr>
+                            <tr>
+                              <td>Lollipop</td>
+                              <td>$7.00</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <p>Datos de la orden...pendiente!</p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </section>
+    <!--formulario-->
+    <div class="container">
+      <h2 class="titulo_2 center">Datos del cliente</h2>
+      <form class="formulario card-panel"id="data_pedido" action="mailto:xxxxx@gmail.com" method="post" enctype="text/plain">
+        <fieldset>
+          <!--grupo checbox-->
+        <div class="formulario_grupo center" id="formulario_terminos">
+          <label class="formulario_label">
+            <input id="terminos" type="checkbox" class="formulario__checkbox" name="terminos"/>
+            <span>Acepta los terminos de tratamiento de datos</span>
+          </label>
+        </div>
+        <div class="row col s12">
+          <!--grupo nombre-->
+          <div class="formulario__grupo " id="grupo__nombre">
+            <div class="input-field col s6 formulario__grupo-input">
+              <i class="formulario__validación-estado material-icons prefix">account_circle</i>
+              <input class="formulario__input" name="nombre" placeholder="Usuario" id="nombre" type="text">
+              <label class="formulario_label" for="nombre">Nombre de Usuario</label>
+            </div>
+            <p class="formulario__input-error">Deber ser un nombre</p>
+          </div>
+          <!--grupo apellido-->
+          <div class="formulario__grupo" id="grupo__apellido">
+            <div class="input-field col s6 formulario__grupo-input">
+              <i class="formulario__validación-estado material-icons prefix">account_circle</i>
+              <input class="formulario__input" name="apellido" placeholder="Usuario" id="apellido" type="text">
+              <label class="formulario_label" for="apellido">Apellido de Usuario</label>
+            </div>
+            <p class="formulario__input-error">Deber ser un apellido</p>
+          </div>
+          <!--grupo identificacion-->
+          <div class="formulario__grupo" id="grupo__identificacion">
+            <div class="input-field col s6 formulario__grupo-input">
+              <i class="formulario__validación-estado material-icons prefix">info_outline</i>
+              <input class="formulario__input" name="identifiacion" placeholder="#########" id="identificacion" type="text">
+              <label class="formulario_label" for="identifiacion">Número de Identificación</label>
+            </div>
+            <p class="formulario__input-error">Número de identifiación válida</p>
+          </div>
+          <!--grupo Fecha de nacimiento-->
+          <div class="formulario__grupo" id="grupo__edad">
+            <div class="input-field col s6 formulario__grupo-input">
+              <i class="formulario__validación-estado material-icons prefix">cake</i>
+              <input class="formulario__input" name="edad" placeholder="01/01/2000" id="edad" type="date">
+              <label class="formulario_label" for="edad">Fecha de Nacimiento</label>
+            </div>
+            <p class="formulario__input-error">Fecha de nacimiento real</p>
+          </div>
+          <!--grupo Ciudad-->
+          <div class="formulario__grupo " id="grupo__ciudad">
+            <div class="input-field col s6 formulario__grupo-input">
+              <i class="formulario__validación-estado material-icons prefix">location_city</i>
+              <input class="formulario__input" name="ciudad" placeholder="Bogotá" id="ciudad" type="text">
+              <label class="formulario_label" for="ciudad">Ciudad de Ubicación</label>
+            </div>
+            <p class="formulario__input-error">Ciudad de ubicación real</p>
+          </div>
+          <!--grupo Direccion-->
+          <div class="formulario__grupo" id="grupo__direccion">
+            <div class="input-field col s6 formulario__grupo-input">
+              <i class="formulario__validación-estado material-icons prefix">location_on</i>
+              <input class="formulario__input" name="direccion" placeholder="Dirección carrera # calle #" id="direccion" type="text">
+              <label class="formulario_label" for="direccion">Dirección Para Entrega</label>
+            </div>
+            <p class="formulario__input-error">Debe ser una dirección real</p>
+          </div>
+          <!--grupo Telefono-->
+          <div class="formulario__grupo" id="grupo__telefono">
+            <div class="input-field col s6 formulario__grupo-input">
+              <i class="formulario__validación-estado material-icons prefix">phone</i>
+              <input class="formulario__input" name="telefono" placeholder="3## ### ####" id="telefono" type="text">
+              <label class="formulario_label" for="telefono">Número Celular</label>
+            </div>
+            <p class="formulario__input-error">Telefono para contacto de entrega</p>
+          </div>
+          <!--grupo email-->
+          <div class="formulario__grupo" id="grupo__email">
+            <div class="input-field col s6 formulario__grupo-input">
+              <i class="formulario__validación-estado material-icons prefix">email</i>
+              <input class="formulario__input" name="email" placeholder="usuario@correo.com" id="email" type="email">
+              <label class="formulario_label" for="email">Email</label>
+            </div>
+            <p class="formulario__input-error">Deber ser un email registrado</p>
+          </div>
+        </div>
+        <!--grupo mensaje usuario-->
+        <div class="input-field col s12">
+          <i class="material-icons prefix">insert_comment</i>
+          <input id="mensaje" type="text">
+          <label  for="mensaje">Describa recomendaciones para la entrega:</label>
+        </div>
+        <!--grupo mensaje-->
+        <div class="formulario__mensaje" id="formulario__mensaje">
+          <p><i class="material-icons prefix">warning</i><b>Error</b> Ingrese corrrectamente los datos</p>
+        </div>
+        <!--grupo Botones de envio-->
+        <div class="row col s12 center">
+          <div class="row col s6 formulario__grupo formulario__grupo-btn">
+            <button type="reset" class="formulario__btn-rechazar">Rechazar</button>
+            <p><i id="formulario__mensaje-rechazar" class="formulario__mensaje-rechazar"></i>Se han limpiado los datos</p>
+          </div>
+          <div class="row col s6 formulario__grupo formulario__grupo-btn">
+            <button type="submit" class="formulario__btn-enviar">Enviar</button>
+            <p><i id="formulario__mensaje-enviar" class="formulario__mensaje-enviar"></i>Se ha realizado la orden de pedido</p>
+          </div>        
+        </div>
+      </fieldset> 
+    </form>
+  </div>
+<!--Pie de página-->
+<div class="center">
+  <ul class="pagination">
+    <li class="disabled"><a href="#"><i class="material-icons">chevron_left</i></a></li>
+        <li class="active red darken-4"><a href="pedido.html">6</a></li>
+    <li class="disabled"><a href="#"><i class="material-icons">chevron_right</i></a></li>
+  </ul>
+</div>
+    <footer class="page-footer red darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">By Elk. Bar. Lan.</h5>
+                    <p class="grey-text text-lighten-4">Barbosa. Santander. 2025.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+              © 2014 Copyright Text
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+  M.AutoInit();
+</script>
+</html>

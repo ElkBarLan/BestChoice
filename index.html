@@ -10,194 +10,289 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="Script.js"></script>
-    <link rel="stylesheet" href="./Styles.css"> 
-
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="./styles.css"> 
 </head>
-
-  <body>
+ <body>
     <!--Encabezado-->
-    <nav class="nav-extended">
-        <div class="nav-wrapper">
-            <figure>
-                <img src="./imagenes/Logo.png" alt="Logo">
-            </figure>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="Desayuno.html" class="waves-effect waves-light btn">Desayuno</a></li>
-            <li><a href="Onces.html" class="waves-effect waves-light btn">Onces</a></li>
-            <li><a href="Almuerzo.html" class="waves-effect waves-light btn">Almuerzo</a></li>
-            <li><a href="Tardes.html" class="waves-effect waves-light btn">Tardes</a></li>
-          </ul>
-        </div>
-        <div class="nav-content">
-          <h1 class="titulo_1">Restaurante Pepito Perez</h1>
-        </div>
+  <nav class="nav-extended red darken-4">
+      <figure>
+        <img src="./imagenes/logo.png" alt="Logo">
+      </figure>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="desayuno.html" class="waves-effect waves-light btn">Desayuno</a></li>
+        <li><a href="onces.html" class="waves-effect waves-light btn">Onces</a></li>
+        <li><a href="almuerzo.html" class="waves-effect waves-light btn">Almuerzo</a></li>
+        <li><a href="tardes.html" class="waves-effect waves-light btn">Tardes</a></li>
+      </ul>
+      <h1 class="titulo_1">¡¡¡De la cocina a tus manos!!!</h1>
     </nav>
     <!---Contenido-->
     <section>
         <div class="col s12 m7">
-            <h2 class="titulo_2">Desayuno</h2>
+            <h2 class="titulo_2">Menú Desayuno</h2>
             <div class="card horizontal">
               <div class="card-image">
-                <img src="./imagenes/Desayuno.png" alt="Desayuno">
+                <img src="./imagenes/desayuno.jpg" alt="Desayuno">
               </div>
               <div class="card-stacked">
                 <div class="card-content">
-                    <ul id='dropdown_d1' class='dropdown-content'>
-                        <li><a href="#!">Café</a></li>
-                        <li><a href="#!">Café con leche</a></li>
-                        <li><a href="#!">Jugo de naranja</a></li>
-                        <li><a href="#!">Chocolate</a></li>
-                        <li><a href="#!">Aromática</a></li>
-                    </ul>
-                    <a class='dropdown-trigger btn' href='#!' data-target='dropdown_d1'>Bebidas</a>
-                    <ul id='dropdown_d2' class='dropdown-content'>
-                        <li><a href="#!">Frito</a></li>
-                        <li><a href="#!">Revuelto</a></li>
-                        <li><a href="#!">Pericos</a></li>
-                        <li><a href="#!">Con salchicha</a></li>
-                    </ul>
-                    <a class='dropdown-trigger btn' href='#!' data-target='dropdown_d2'>Huevos</a>
-                    <ul id='dropdown_d3' class='dropdown-content'>
-                        <li><a href="#!">Costilla</a></li>
-                        <li><a href="#!">Pescado</a></li>
-                        <li><a href="#!">Caldo con huevo</a></li>
-                        <li><a href="#!">Changua</a></li>
-                    </ul>
-                    <a class='dropdown-trigger btn' href='#!' data-target='dropdown_d3'>Caldos</a>
-                    <ul id='dropdown_d4' class='dropdown-content'>
-                        <li><a href="#!">Pan</a></li>
-                        <li><a href="#!">Arepa</a></li>
-                        <li><a href="#!">Arroz</a></li>
-                        <li><a href="#!">Envuelto</a></li>
-                        <li><a href="#!">Tajadas</a></li>
-                    </ul>
-                    <a class='dropdown-trigger btn' href='#!' data-target='dropdown_d4'>Adicionales</a>
+                  <ul class="collapsible">
+                    <li>
+                      <div class="collapsible-header">
+                        <a class="waves-effect waves-light btn">Bebidas</a>
+                      </div>
+                      <div class="collapsible-body">
+                        <ul class='collection'>
+                          <li>Café = $2000</li>
+                          <li>Café con leche = $3000</li>
+                          <li>Jugo de naranja = $3000</li>
+                          <li>Chocolate = $4000</li>
+                          <li>Aromática = $2000</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header">
+                        <a class="waves-effect waves-light btn">Huevos</a>
+                      </div>
+                      <div class="collapsible-body">
+                        <ul class='collection'>
+                          <li>Frito = $2000</li>
+                          <li>Revuelto = $3000</li>
+                          <li>Pericos = $4000</li>
+                          <li>Con salchicha = $4000</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header">
+                        <a class="waves-effect waves-light btn">Caldos</a>
+                      </div>
+                      <div class="collapsible-body">
+                        <ul class='collection'>
+                          <li>Costilla = $7000</li>
+                          <li>Pescado = $7000</li>
+                          <li>Con huevo = $5000</li>
+                          <li>Changua = $5000</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header">
+                        <a class="waves-effect waves-light btn">Adicionales</a>
+                      </div>
+                      <div class="collapsible-body">
+                        <ul class='collection'>
+                          <li>Pan x 2 = $1000</li>
+                          <li>Arepa = $3000</li>
+                          <li>Arroz = $2000</li>
+                          <li>Envuelto = $2000</li>
+                          <li>Tajadas = $3000</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
         </div>
         <div class="col s12 m7">
-            <h2 class="titulo_2">Onces</h2>
+            <h2 class="titulo_2">Menú Onces</h2>
             <div class="card horizontal">
               <div class="card-image">
-                <img src="./imagenes/Onces.png" alt="Onces">
+                <img src="./imagenes/onces.jpg" alt="Onces">
               </div>
               <div class="card-stacked">
                 <div class="card-content">
-                    <ul id='dropdown_o1' class='dropdown-content'>
-                        <li><a href="#!">Café</a></li>
-                        <li><a href="#!">Café con leche</a></li>
-                        <li><a href="#!">Jugos naturales</a></li>
-                        <li><a href="#!">Productos procesados</a></li>
-                        <li><a href="#!">Milo</a></li>
-                        <li><a href="#!">Avena</a></li>
-                        <li><a href="#!">Aromática</a></li>
-                        <li><a href="#!">Gaseosa</a></li>
-                    </ul>
-                    <a class='dropdown-trigger btn' href='#!' data-target='dropdown_o1'>Bebidas</a>
-                    <ul id='dropdown_o2' class='dropdown-content'>
-                        <li><a href="#!">Empanada</a></li>
-                        <li><a href="#!">Buñuelo</a></li>
-                        <li><a href="#!">Pan de bono</a></li>
-                        <li><a href="#!">Torta</a></li>
-                        <li><a href="#!">Arepa</a></li>
-                    </ul>
-                    <a class='dropdown-trigger btn' href='#!' data-target='dropdown_o2'>Acompañamiento</a>
-                    <ul id='dropdown_o3' class='dropdown-content'>
-                        <li><a href="#!">Chocolatina</a></li>
-                        <li><a href="#!">Mentas</a></li>
-                        <li><a href="#!">Chicle</a></li>
-                        <li><a href="#!">Caramelos</a></li>
-                        <li><a href="#!">Galletas</a></li>
-                    </ul>
-                    <a class='dropdown-trigger btn' href='#!' data-target='dropdown_o3'>Dulces</a>
+                  <ul class="collapsible">
+                    <li>
+                      <div class="collapsible-header">
+                        <a class="waves-effect waves-light btn">Bebidas</a>
+                      </div>
+                      <div class="collapsible-body">
+                        <ul class='collection'>
+                          <li>Café = $2000</li>
+                          <li>Café con leche = $3000</li>
+                          <li>Jugos naturales = $3000</li>
+                          <li>Chocolate = $4000</li>
+                          <li>Milo = $4000</li>
+                          <li>Avena = $3000</li>
+                          <li>Aromática = $2000</li>
+                          <li>Gaseosa = $3000</li>
+                          <li>Productos procesados = $4000</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header">
+                        <a class="waves-effect waves-light btn">Acompañamiento</a>
+                      </div>
+                      <div class="collapsible-body">
+                        <ul class='collection'>
+                          <li>Empanada = $3000</li>
+                          <li>Buñuelo = $3000</li>
+                          <li>Pan de bono = $2500</li>
+                          <li>Torta = $2500</li>
+                          <li>Arepa = $2500</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header">
+                        <a class="waves-effect waves-light btn">Dulces</a>
+                      </div>
+                      <div class="collapsible-body">
+                        <ul class='collection'>
+                          <li>Chocolatina = $2000</li>
+                          <li>Mentas x 3 = $1000</li>
+                          <li>Chicle x 2 = $1000</li>
+                          <li>Caramelos x 3 = $1000</li>
+                          <li>Galletas x 2 = $1500</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
         </div>
         <div class="col s12 m7">
-            <h2 class="titulo_2">Almuerzo</h2>
+            <h2 class="titulo_2">Menú Almuerzo</h2>
             <div class="card horizontal">
               <div class="card-image">
-                <img src="./imagenes/Almuerzo.png" alt="Almuerzo">
+                <img src="./imagenes/almuerzo.jpg" alt="Almuerzo">
               </div>
               <div class="card-stacked">
                 <div class="card-content">
-                    <ul id='dropdown_a1' class='dropdown-content'>
-                        <li><a href="#!">Agua</a></li>
-                        <li><a href="#!">Gaseosa</a></li>
-                        <li><a href="#!">Jugo natural</a></li>
-                        <li><a href="#!">Jugo procesado</a></li>
-                    </ul>
-                    <a class='dropdown-trigger btn' href='#!' data-target='dropdown_a1'>Bebidas</a>
-                    <ul id='dropdown_a2' class='dropdown-content'>
-                        <li><a href="#!">Frijol</a></li>
-                        <li><a href="#!">Espagueti</a></li>
-                        <li><a href="#!">Verduras</a></li>
-                        <li><a href="#!">Granos</a></li>
-                    </ul>
-                    <a class='dropdown-trigger btn' href='#!' data-target='dropdown_a2'>Principio</a>
-                    <ul id='dropdown_a3' class='dropdown-content'>
-                        <li><a href="#!">Papa</a></li>
-                        <li><a href="#!">Platano</a></li>
-                        <li><a href="#!">Yuca</a></li>
-                        <li><a href="#!">Arroz</a></li>
-                    </ul>
-                    <a class='dropdown-trigger btn' href='#!' data-target='dropdown_a3'>Acompañamiento</a>
-                    <ul id='dropdown_a4' class='dropdown-content'>
-                        <li><a href="#!">Carne de res</a></li>
-                        <li><a href="#!">Carne de cerdo</a></li>
-                        <li><a href="#!">Pollo</a></li>
-                        <li><a href="#!">Pescado</a></li>
-                        <li><a href="#!">Higado</a></li>
-                    </ul>
-                    <a class='dropdown-trigger btn' href='#!' data-target='dropdown_a4'>Proteina</a>
-                    <ul id='dropdown_a5' class='dropdown-content'>
-                        <li><a href="#!">Dulce</a></li>
-                        <li><a href="#!">Roja</a></li>
-                        <li><a href="#!">Fruta</a></li>
-                        <li><a href="#!">Agridulce</a></li>
-                        <li><a href="#!">Aguacate</a></li>
-                    </ul>
-                    <a class='dropdown-trigger btn' href='#!' data-target='dropdown_a5'>Ensalada</a>
+                  <ul class="collapsible">
+                    <li>
+                      <div class="collapsible-header">
+                        <a class="waves-effect waves-light btn">Bebidas</a>
+                      </div>
+                      <div class="collapsible-body">
+                        <ul class='collection'>
+                          <li>Agua = $1000</li>
+                          <li>Gaseosa = $4000</li>
+                          <li>Jugo natural = $4000</li>
+                          <li>Jugo procesado = $5000</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header">
+                        <a class="waves-effect waves-light btn">Principio</a>
+                      </div>
+                      <div class="collapsible-body">
+                        <ul class='collection'>
+                          <li>Frijol = $3000</li>
+                          <li>Espaguetti = $3000</li>
+                          <li>Verduras = $2500</li>
+                          <li>Granos = $3000</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header">
+                        <a class="waves-effect waves-light btn">Acompañamiento</a>
+                      </div>
+                      <div class="collapsible-body">
+                        <ul class='collection'>
+                          <li>Papa = $2000</li>
+                          <li>Plátano = $2000</li>
+                          <li>Yuca = $2500</li>
+                          <li>Arroz = $2000</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header">
+                        <a class="waves-effect waves-light btn">Proteina</a>
+                      </div>
+                      <div class="collapsible-body">
+                        <ul class='collection'>
+                          <li>Carne de res = $6000</li>
+                          <li>Carne de cerdo = $6000</li>
+                          <li>Pollo = $5000</li>
+                          <li>Pescado = $6500</li>
+                          <li>Higado = $5000</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header">
+                        <a class="waves-effect waves-light btn">Ensalada</a>
+                      </div>
+                      <div class="collapsible-body">
+                        <ul class='collection'>
+                          <li>Dulce = $2000</li>
+                          <li>Roja = $2000</li>
+                          <li>Fruta = $3000</li>
+                          <li>Agridulce = $2000</li>
+                          <li>Aguacate = $3000</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
         </div>
         <div class="col s12 m7">
-            <h2 class="titulo_2">Tardes</h2>
+            <h2 class="titulo_2">Menú Tardes</h2>
             <div class="card horizontal">
               <div class="card-image">
-                <img src="./imagenes/Tardes.png" alt="Tardes">
+                <img src="./imagenes/tardes.jpg" alt="Tardes">
               </div>
               <div class="card-stacked">
                 <div class="card-content">
-                    <ul id='dropdown_t1' class='dropdown-content'>
-                        <li><a href="#!">Café</a></li>
-                        <li><a href="#!">Café con leche</a></li>
-                        <li><a href="#!">Jugo</a></li>
-                        <li><a href="#!">Milo</a></li>
-                        <li><a href="#!">Aromática</a></li>
-                    </ul>
-                    <a class='dropdown-trigger btn' href='#!' data-target='dropdown_t1'>Bebidas</a>
-                    <ul id='dropdown_t2' class='dropdown-content'>
-                        <li><a href="#!">Empanada</a></li>
-                        <li><a href="#!">Buñuelo</a></li>
-                        <li><a href="#!">Pan de bono</a></li>
-                        <li><a href="#!">Torta</a></li>
-                        <li><a href="#!">Arepa</a></li>
-                    </ul>
-                    <a class='dropdown-trigger btn' href='#!' data-target='dropdown_t2'>Acompañamiento</a>
-                    <ul id='dropdown_t3' class='dropdown-content'>
-                        <li><a href="#!">Chocolatina</a></li>
-                        <li><a href="#!">Mentas</a></li>
-                        <li><a href="#!">Chicle</a></li>
-                        <li><a href="#!">Caramelos</a></li>
-                        <li><a href="#!">Galletas</a></li>
-                        <li><a href="#!">Snaks</a></li>
-                    </ul>
-                    <a class='dropdown-trigger btn' href='#!' data-target='dropdown_t3'>Adicionales</a>
+                  <ul class="collapsible">
+                    <li>
+                      <div class="collapsible-header">
+                        <a class="waves-effect waves-light btn">Bebidas</a>
+                      </div>
+                      <div class="collapsible-body">
+                        <ul class='collection'>
+                          <li>Café = $2000</li>
+                          <li>Café con leche = $3000</li>
+                          <li>Jugos naturales = $3000</li>
+                          <li>Chocolate = $4000</li>
+                          <li>Milo = $4000</li>
+                          <li>Avena = $3000</li>
+                          <li>Aromática = $2000</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header">
+                        <a class="waves-effect waves-light btn">Acompañamiento</a>
+                      </div>
+                      <div class="collapsible-body">
+                        <ul class='collection'>
+                          <li>Empanada = $3000</li>
+                          <li>Buñuelo = $3000</li>
+                          <li>Pan de bono = $2500</li>
+                          <li>Torta = $2500</li>
+                          <li>Arepa = $2500</li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="collapsible-header">
+                        <a class="waves-effect waves-light btn">Dulces</a>
+                      </div>
+                      <div class="collapsible-body">
+                        <ul class='collection'>
+                          <li>Chocolatina = $2000</li>
+                          <li>Mentas x 3 = $1000</li>
+                          <li>Chicle x 2 = $1000</li>
+                          <li>Caramelos x 3 = $1000</li>
+                          <li>Galletas x 2 = $1500</li>
+                          <li>Snaks = $4000</li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -206,16 +301,16 @@
     <!--Pie de página-->
     <div class="center">
       <ul class="pagination">
-        <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-        <li class="active"><a href="Index.html">1</a></li>
-        <li class="waves-effect"><a href="Desayuno.html">2</a></li>
-        <li class="waves-effect"><a href="Onces.html">3</a></li>
-        <li class="waves-effect"><a href="Almuerzo.html">4</a></li>
-        <li class="waves-effect"><a href="Tardes.html">5</a></li>
-        <li class="disabled"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+        <li class="disabled"><a href="#"><i class="material-icons">chevron_left</i></a></li>
+        <li class="active red darken-4"><a href="index.html">1</a></li>
+        <li class="waves-effect"><a href="desayuno.html">2</a></li>
+        <li class="waves-effect"><a href="onces.html">3</a></li>
+        <li class="waves-effect"><a href="almuerzo.html">4</a></li>
+        <li class="waves-effect"><a href="tardes.html">5</a></li>
+        <li class="disabled"><a href="#"><i class="material-icons">chevron_right</i></a></li>
       </ul>
     </div>
-    <footer class="page-footer">
+    <footer class="page-footer red darken-4">
       <div class="container">
         <div class="row">
           <div class="col l6 s12">

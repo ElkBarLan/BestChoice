@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pag_Evi_Desayuno</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="./styles.css"> 
+
+</head>
+
+<body>
+    <!--Encabezado-->
+    <nav class="nav-extended red darken-4">
+        <figure>
+            <img src="./imagenes/logo2.png" alt="Logo">
+        </figure>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="index.html" class="waves-effect waves-light btn">
+                <i class="material-icons right">local_dining</i>Regresar</a></li>
+            <li><a href="pedido.html" class="waves-effect waves-light btn">
+                <i class="material-icons right">local_grocery_store</i>Pedido</a></li>
+        </ul>
+        <h2 class="titulo_1">¡¡¡De la cocina a tus manos!!!</h2>
+    </nav>      
+    <!---Contenido-->
+    <section>
+        <div class="col s12 m7">
+            <h2 class="titulo_2">Orden de Desayuno ###</h2>
+            <div class="card horizontal">
+              <div class="card-image">
+                <img src="./imagenes/desayuno.jpg" alt="Desayuno">
+              </div>
+              <div class="card-stacked">
+                <div class="card-content">
+                    <h4 class="titulo_3">Bebidas</h4>
+                    <div class="input-field col s12">
+                        <select multiple> 
+                            <option value="1">Café</option>
+                            <option value="2">Café con leche</option>
+                            <option value="3">Jugo de naranja</option>
+                            <option value="4">Chocolate</option>
+                            <option value="5">Aromática</option>
+                        </select>
+                    </div>
+                    <h4 class="titulo_3">Huevos</h4>
+                    <div class="input-field col s12">
+                        <select multiple> 
+                            <option value="6">Frito</option>
+                            <option value="7">Revueltos</option>
+                            <option value="8">Pericos</option>
+                            <option value="9">Con salchicha</option>
+                        </select>
+                    </div>
+                    <h4 class="titulo_3">Caldos</h4>
+                    <div class="input-field col s12">
+                        <select multiple> 
+                            <option value="10">Costilla</option>
+                            <option value="11">Pescado</option>
+                            <option value="12">Con huevo</option>
+                            <option value="13">Changua</option>
+                        </select>
+                    </div>
+                    <h4 class="titulo_3">Adicionales</h4>
+                    <div class="input-field col s12">
+                        <select multiple> 
+                            <option value="14">Pan x 2</option>
+                            <option value="15">Arepa</option>
+                            <option value="16">Arroz</option>
+                            <option value="17">Envuelto</option>
+                            <option value="18">Tajadas</option>
+                        </select>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+<!--Datos cliente-->
+
+    <!--Pie de página-->
+<div class="center">
+    <ul class="pagination">
+      <li class="disabled"><a href="#"><i class="material-icons">chevron_left</i></a></li>
+      <li class="waves-effect"><a href="index.html">1</a></li>
+      <li class="active red darken-4"><a href="desayuno.html">2</a></li>
+      <li class="waves-effect"><a href="onces.html">3</a></li>
+      <li class="waves-effect"><a href="almuerzo.html">4</a></li>
+      <li class="waves-effect"><a href="tardes.html">5</a></li>
+      <li class="disabled"><a href="#"><i class="material-icons">chevron_right</i></a></li>
+    </ul>
+  </div>
+    <footer class="page-footer red darken-4">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">By Elk. Bar. Lan.</h5>
+            <p class="grey-text text-lighten-4">Barbosa. Santander. 2025.</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2014 Copyright Text
+        </div>
+      </div>
+    </footer>
+</body>
+<script>
+  M.AutoInit();
+</script>
+</html>
