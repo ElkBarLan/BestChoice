@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best_Choice_Pedido</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <!--Encabezado-->
+  <nav class="nav-extended red darken-4">
+    <figure>
+      <img src="./imagenes/Logo2.png" alt="Logo">
+    </figure>
+    <h2 class="titulo_1">¡¡¡De la cocina a tus manos!!!</h2>
+  </nav>
+  <!--formulario-->
+  <div class="container">
+    <form class="card-panel" id="formulario" action="mailto:xxxxx@gmail.com" method="post" enctype="text/plain">
+      <fieldset class="row">
+        <!--Identificación y contenido de la orden-->
+        <div class="input-field col s12">
+          <!--número de la orden-->
+          <div class="container titulo_2 ">
+            <h4 id="ide__orden"></h4>
+          </div>
+          <div class="col s6">
+            <h6 class="titulo_3">Valor $:</h6>
+            <p id="listaPrecios"></p>
+          </div>
+          <div class="col s6">
+            <h6 class="titulo_3">Productos:</h6>
+            <p id="listaElementos"></p>
+          </div>
+          <div class="col s12">
+            <h6 class="titulo_3">Valor de la orden $:</h6>
+            <p id="totalCost">Valor</p>
+          </div>
+        </div>
+        <!--datos cliente-->
+        <h4 class="titulo_2">Datos del cliente</h4>
+        <!--grupo nombre-->
+        <div class="input-field col s6 " id="grupo__nombre">
+          <i class="material-icons prefix">account_circle</i>
+          <input name="nombre" placeholder="Pepito" id="nombre" type="text">
+          <label for="nombre">Nombre de Usuario</label>
+          <div class="input_error" id="señal__nombre">
+            <p>Nombres sin tildes, números, simbolos o puntos</p>
+          </div>
+        </div>
+        <!--grupo apellido-->
+        <div class="input-field col s6 " id="grupo__apellido">
+          <i class="material-icons prefix">account_circle</i>
+          <input name="apellido" placeholder="Perez" id="apellido" type="text">
+          <label for="apellido">Apellido de Usuario</label>
+          <div class="input_error" id="señal__apellido">
+            <p>Apellidos sin tildes, números, simbolos o puntos</p>
+          </div>
+        </div>
+        <!--grupo identificacion-->
+        <div class="input-field col s6 " id="grupo__identificacion">
+          <i class="material-icons prefix">info_outline</i>
+          <input name="identificacion" placeholder="Cédula" id="identificacion" type="text">
+          <label for="identificacion">Identificación de Usuario</label>
+          <div class="input_error" id="señal__identificacion">
+            <p>Ingrese su identificación sin puntos, espacios, letras o simbolos</p>
+          </div>
+        </div>
+        <!--grupo Fecha de nacimiento-->
+        <div class="input-field col s6" id="grupo__fecha">
+          <i class="material-icons prefix">cake</i>
+          <input name="fecha" id="fecha" type="date" />
+          <label for="fecha">Fecha de Nacimiento</label>
+          <div class="input_error" id="señal__fecha">
+            <p>Debe ser mayor de edad</p>
+          </div>
+        </div>
+        <!--grupo Ciudad-->
+        <div class="input-field col s6 " id="grupo__ciudad">
+          <i class="material-icons prefix">location_city</i>
+          <input name="ciudad" placeholder="Bogotá" id="ciudad" type="text">
+          <label for="ciudad">Ciudad de Usuario</label>
+          <div class="input_error" id="señal__ciudad">
+            <p>Ciudad de entrega sin tildes, números, simbolos o puntos</p>
+          </div>
+        </div>
+        <!--grupo Direccion-->
+        <div class="input-field col s6 " id="grupo__direccion">
+          <i class="material-icons prefix">location_on</i>
+          <input name="direccion" placeholder="Carrera 1 # 1 - 10" id="direccion" type="text">
+          <label for="direccion">Dirección de Entrega</label>
+          <div class="input_error" id="señal__direccion">
+            <p>Dirección precisa para la entrega del pedido</p>
+          </div>
+        </div>
+        <!--grupo Telefono-->
+        <div class="input-field col s6 " id="grupo__telefono">
+          <i class="material-icons prefix">phone</i>
+          <input name="telefono" placeholder="3########" id="telefono" type="text">
+          <label for="telefono">Teléfono de Contacto</label>
+          <div class="input_error" id="señal__telefono">
+            <p>Número celular para contacto de entrega</p>
+          </div>
+        </div>
+        <!--grupo email-->
+        <div class="input-field col s6 " id="grupo__email">
+          <i class="material-icons prefix">email</i>
+          <input name="email" placeholder="uduario@correo.com" id="email" type="email">
+          <label for="email">email de Usuario</label>
+          <div class="input_error" id="señal__email">
+            <p>Correo registrado del usuario para enviar factura</p>
+          </div>
+        </div>
+        <!--grupo area de texto-->
+        <br>
+        <div class="row">
+          <div class="input-field col s12">
+            <i class="material-icons prefix">insert_comment</i>
+            <textarea id="comentario" name="comentario" class="materialize-textarea" maxlength="120"
+              onclick="mensaje()"></textarea>
+            <label for="comentario">Ingrese comentarios para la entrega.</label>
+            <span id="cantidad">120</span>
+          </div>
+        </div>
+        <!--grupo checbox-->
+        <div class="center" id="grupo__terminos">
+          <label>
+            <input id="terminos" type="checkbox" class="formulario__checkbox" name="terminos" />
+            <span>Acepta los terminos de tratamiento de datos</span>
+          </label>
+        </div>
+        <!--grupo botones-->
+        <br>
+        <div class="col s6 center">
+          <a class="waves-effect red btn" href="index.html" type="reset">
+            <i class="material-icons right">cancel</i>Rechazar orden</a>
+        </div>
+        <div class="col s6 center">
+          <button type="submit" class="waves-effect green btn">
+            <i class="material-icons right">send</i>Enviar Orden</button>
+        </div>
+        <br>
+        <br>
+        <div class="center formulario__envio" id="mensaje__envio">
+          <p><i class="material-icons prefix">warning</i>Orden de pedido enviada!!!</p>
+        </div>
+      </fieldset>
+    </form>
+    <!--grupo mensaje-->
+    <div class="formulario__mensaje" id="formulario__mensaje">
+      <p><i class="material-icons prefix">warning</i><b>Error</b> Ingrese corrrectamente los datos y
+        Acepte los teminos y condiciones</p>
+    </div>
+  </div>
+
+  <!--Pie de página-->
+  <div class="center">
+    <ul class="pagination">
+      <li class="disabled"><a href="#"><i class="material-icons">chevron_left</i></a></li>
+      <li class="active red darken-4"><a href="pedido.html">6</a></li>
+      <li class="disabled"><a href="#"><i class="material-icons">chevron_right</i></a></li>
+    </ul>
+  </div>
+  <footer class="page-footer red darken-4">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">By ElkBarLan</h5>
+          <p class="grey-text text-lighten-4">Barbosa. Santander. 2025.</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2014 Copyright Text
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./orden.js"></script>
+  <script src="./validar.js"></script>
+  <script src="./script.js"></script>
+
+</body>
+
+</html>

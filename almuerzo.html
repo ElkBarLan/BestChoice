@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best_Choice_Almuerzo</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <!--Encabezado-->
+    <nav class="nav-extended red darken-4">
+        <figure>
+            <img src="./imagenes/logo2.png" alt="Logo">
+        </figure>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="index.html" class="waves-effect waves-light btn">
+                    <i class="material-icons right">local_dining</i>Regresar</a></li>
+            <li><a href="pedido.html" class="waves-effect waves-light btn" type="submit" onclick="submitValue()">
+                    <i class="material-icons right">local_grocery_store</i>Pedido</a></li>
+        </ul>
+        <h2 class="titulo_1">¡¡¡De la cocina a tus manos!!!</h2>
+    </nav>
+    <!---Contenido-->
+    <section>
+        <!---¡definir el número de menus select de la pagina!-->
+        <div id="ide" hidden>5</div>
+        <!---Contenido del menú-->
+        <div class="container">
+            <h2 class="titulo_2">Orden de Almuerzo</h2>
+            <div class="card horizontal">
+                <div class="card-image">
+                    <img src="./imagenes/almuerzo.jpg" alt="Almuerzo">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <h4 class="titulo_3">Bebidas</h4>
+                        <select multiple id="menu__1">
+                            <option value="1000">Agua</option>
+                            <option value="4000">Gaseosa</option>
+                            <option value="4000">Jugo naturale</option>
+                            <option value="5000">Jugo procesado</option>
+                        </select>
+                        <h4 class="titulo_3">Principio</h4>
+                        <select multiple id="menu__2">
+                            <option value="3000">Frijol</option>
+                            <option value="3000">Espaguetti</option>
+                            <option value="2500">Verduras</option>
+                            <option value="3000">Granos</option>
+                        </select>
+                        <h4 class="titulo_3">Acompañamiento</h4>
+                        <select multiple id="menu__3">
+                            <option value="2000">Papa</option>
+                            <option value="2000">Platano</option>
+                            <option value="2500">Yuca</option>
+                            <option value="2000">Arroz</option>
+                        </select>
+                        <h4 class="titulo_3">Proteina</h4>
+                        <select multiple id="menu__4">
+                            <option value="6000">Carne de res</option>
+                            <option value="6000">Carne de cerdo</option>
+                            <option value="5000">Pollo</option>
+                            <option value="6500">Pescado</option>
+                            <option value="5000">Higado</option>
+                        </select>
+                        <h4 class="titulo_3">Ensalada</h4>
+                        <select multiple id="menu__5">
+                            <option value="2000">Dulce</option>
+                            <option value="2000">Roja</option>
+                            <option value="3000">Fruta</option>
+                            <option value="2000">Agridulce</option>
+                            <option value="3000">Aguacate</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Pie de página-->
+    <div class="center">
+        <ul class="pagination">
+            <li class="disabled"><a href="#"><i class="material-icons">chevron_left</i></a></li>
+            <li class="waves-effect"><a href="index.html">1</a></li>
+            <li class="waves-effect"><a href="desayuno.html">2</a></li>
+            <li class="waves-effect"><a href="onces.html">3</a></li>
+            <li class="active red darken-4"><a href="almuerzo.html">4</a></li>
+            <li class="waves-effect"><a href="tardes.html">5</a></li>
+            <li class="disabled"><a href="#"><i class="material-icons">chevron_right</i></a></li>
+        </ul>
+    </div>
+
+    <footer class="page-footer red darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">By ElkBarLan</h5>
+                    <p class="grey-text text-lighten-4">Barbosa. Santander. 2025.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2014 Copyright Text
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+    <script src="orden.js"></script>
+  
+
+</body>
+
+</html>
